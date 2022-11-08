@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Quicksand&family=Sofia&family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --unit: 15px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    position: absolute;
+    z-index: -1;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: floralwhite;
+    position: sticky;
+    top: 0;
+}
+
+.head > *{
+    flex-basis: 50%;
+    font-size: calc(var(--unit)*2);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.name{
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    gap:var(--unit);
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2) ;
+    overflow: hidden;
+}
+
+.title{
+    font-weight: 300;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.359);
+    letter-spacing: 5px;
+    font-weight: lighter;
+    overflow: hidden;
+}
+
+.q{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.q > div{
+    width: 40%;
+    height: 60vh;
+    border: 2px solid black;
+    margin-top: 6.6%;
+    background: rgba(173, 216, 230, 0.709);
+    position: relative;
+}
+
+.blur{
+    background: radial-gradient(white 20%, red 70%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(100px);
+    border-radius: 50%;
+    display: none;
+}
+
+.q2, .q1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--unit)*3);
+    color: aliceblue;
+    cursor: pointer;
+    user-select: none;
+}
+
+.answer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: calc(var(--unit)*2);
+    position: relative;
+}
+
+.a1, .a2{
+    background-color: rgba(100, 148, 237, 0.719);
+    padding: calc(var(--unit)*2);
+    overflow: scroll;
+    height: 80vh;
+    display: none;
+}
+
+.atitle{
+    text-align: center;
+    font-size: calc(var(--unit)*3);
+    font-family: Sofia, 'Times New Roman', Times, serif;
+}
+
+.atext{
+    text-indent: 1.3cm;
+    line-height: 2;
+}
+
+.xmark{
+    position: absolute;
+    cursor: pointer;
+    font-size: calc(var(--unit)*3);
+    top: 0;
+    right: var(--unit);
+    color: floralwhite;
+}
